@@ -42,7 +42,7 @@ const LoginForm = () => {
         </button>
       </div>
       <div className="text-[#5C6F7F] relative mb-8 before:absolute before:bottom-[10px] before:bg-[#A0B1C0] before:right-[20px] before:w-[200px] before:h-[1px] after:absolute after:bottom-[10px] after:left-[20px] after:w-[200px] after:h-[1px] after:bg-[#A0B1C0]">
-        {/* Or */}
+        Or
       </div>
       <form
         autoComplete="true"
