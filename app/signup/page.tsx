@@ -37,14 +37,14 @@ const SignupForm = () => {
     <section className="flex flex-col justify-center items-center w-full min-h-screen px-8 lg:px-[93px] ">
       <p className="mb-4 text-sm text-[#5C6F7F]">Log in with:</p>
       <div className="flex gap-x-6 mb-4">
-        {/* <button className="w-[109px] h-10 flex justify-center items-center gap-x-[3px] text-sm text-white bg-primaryColor rounded">
+        <button className="w-[109px] h-10 flex justify-center items-center gap-x-[3px] text-sm text-white bg-primaryColor rounded">
           <Image
             src="/registration/google.svg"
             alt="google"
             width={20}
             height={20}
           />
-          oogle
+          Google
         </button>
         <button className="w-[109px] h-10 flex justify-center items-center gap-x-[3px] text-sm text-white bg-primaryColor rounded">
           <Image
@@ -54,30 +54,30 @@ const SignupForm = () => {
             height={18}
           />
           Apple
-        </button> */}
+        </button>
       </div>
       <div className="text-[#5C6F7F] relative mb-8 before:absolute before:bottom-[10px] before:bg-[#A0B1C0] before:right-[20px] before:w-[200px] before:h-[1px] after:absolute after:bottom-[10px] after:left-[20px] after:w-[200px] after:h-[1px] after:bg-[#A0B1C0]">
-        {/* Or */}
+        Or
       </div>
       <form
         autoComplete="true"
         onSubmit={handleSignUp}
-        className="w-[430px] flex flex-col gap-y-8"
+        className="w-full max-w-sm flex flex-col gap-y-8"
       >
         <div className="relative w-full">
           <input
             ref={UserNameRef}
             type="text"
             placeholder="Username"
-            className="w-full px-[19px] py-[11px] border bg-transparent border-primaryColor rounded otline-none focus-within:outline-primaryColor"
+            className="w-full px-4 py-3 border bg-transparent border-primaryColor rounded outline-none focus-within:outline-primaryColor"
           />
         </div>
         <div className="relative w-full">
           <input
             ref={EmailRef}
             type="email"
-            placeholder="Email "
-            className="w-full px-[19px] py-[11px] border bg-transparent border-primaryColor rounded otline-none focus-within:outline-primaryColor"
+            placeholder="Email"
+            className="w-full px-4 py-3 border bg-transparent border-primaryColor rounded outline-none focus-within:outline-primaryColor"
           />
         </div>
         <div className="relative w-full">
@@ -85,13 +85,15 @@ const SignupForm = () => {
             ref={PasswordRef}
             type="password"
             placeholder="Password"
-            className="w-full px-[19px] py-[11px] border bg-transparent border-primaryColor rounded otline-none focus-within:outline-primaryColor"
+            className="w-full px-4 py-3 border bg-transparent border-primaryColor rounded outline-none focus-within:outline-primaryColor"
           />
           <Image
             src={eye}
             alt="Eye Hide Icon"
             className="absolute right-2 top-4 cursor-pointer"
             onClick={() => revealPassword(PasswordRef)}
+            width={20}
+            height={20}
           />
         </div>
         <div className="relative w-full">
@@ -99,33 +101,34 @@ const SignupForm = () => {
             ref={PasswordConfirmRef}
             type="password"
             placeholder="Retype Password"
-            className="w-full px-[19px] py-[11px] border bg-transparent border-primaryColor rounded otline-none focus-within:outline-primaryColor"
+            className="w-full px-4 py-3 border bg-transparent border-primaryColor rounded outline-none focus-within:outline-primaryColor"
           />
           <Image
             src={eye}
             alt="Eye Hide Icon"
             className="absolute right-2 top-4 cursor-pointer"
             onClick={() => revealPassword(PasswordConfirmRef)}
+            width={20}
+            height={20}
           />
         </div>
         <button
           type="submit"
-          className="w-full px-[18px] py-2 bg-primaryColor mt-4 text-sm text-white rounded-full hover:bg-blue-600"
+          className="w-full px-4 py-2 bg-primaryColor mt-4 text-sm text-white rounded-full hover:bg-blue-600"
         >
           Sign up with Email
         </button>
       </form>
-      <div className="w-full text-center mt-[18px]">
-        <div className=" text-sm text-[#5C6F7F] mb-[15px]">
+      <div className="w-full text-center mt-6">
+        <div className="text-sm text-[#5C6F7F] mb-2">
           Already have an account?{' '}
           <Link href="/login" className="text-primaryColor">
             Log In
           </Link>
         </div>
-        <div className="mt-[15px] text-xs text-[mb-[15px]]">
-          <p>By signing in with an account, you agree to </p>
+        <div className="text-xs text-[#5C6F7F]">
           <p>
-            Scissor&lsquo;s &lsquo;
+            By signing in with an account, you agree to Scissor&lsquo;s &lsquo;
             <span className="text-[#5C6F7F]">
               Terms of Service, Privacy Policy
             </span>
