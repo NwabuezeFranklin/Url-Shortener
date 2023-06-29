@@ -19,10 +19,10 @@ const LoginForm = () => {
   }
 
   return (
-    <section className="flex flex-col justify-center  items-center w-full h-screen px-8 lg:px-[93px] lg:pt-[146px]">
+    <section className="flex flex-col justify-center items-center w-full h-screen px-4 sm:px-8 lg:px-[93px] lg:pt-[146px]">
       <p className="mb-4 text-sm text-[#5C6F7F]">Log in with:</p>
       <div className="flex gap-x-6 mb-4">
-        {/* <button className="w-[109px] h-10 flex justify-center items-center gap-x-[3px] text-sm text-white bg-primaryColor rounded">
+        <button className="w-[109px] h-10 flex justify-center items-center gap-x-[3px] text-sm text-white bg-primaryColor rounded">
           <Image
             src="/registration/google.svg"
             alt="google"
@@ -39,7 +39,7 @@ const LoginForm = () => {
             height={18}
           />
           Apple
-        </button> */}
+        </button>
       </div>
       <div className="text-[#5C6F7F] relative mb-8 before:absolute before:bottom-[10px] before:bg-[#A0B1C0] before:right-[20px] before:w-[200px] before:h-[1px] after:absolute after:bottom-[10px] after:left-[20px] after:w-[200px] after:h-[1px] after:bg-[#A0B1C0]">
         {/* Or */}
@@ -47,14 +47,14 @@ const LoginForm = () => {
       <form
         autoComplete="true"
         onSubmit={handleLogin}
-        className="w-[430px] flex flex-col gap-y-8"
+        className="w-full max-w-md flex flex-col gap-y-8"
       >
         <div className="relative w-full">
           <input
             ref={EmailRef}
             type="email"
             placeholder="Email address"
-            className="w-full px-[19px] py-[11px] border bg-transparent border-primaryColor rounded  focus-within:outline-primaryColor"
+            className="w-full px-[19px] py-[11px] border bg-transparent border-primaryColor rounded focus-within:outline-primaryColor"
           />
         </div>
         <div className="relative w-full">
@@ -62,7 +62,7 @@ const LoginForm = () => {
             ref={PasswordRef}
             type="password"
             placeholder="Password"
-            className="w-full px-[19px] py-[11px] border bg-transparent border-primaryColor rounded  focus-within:outline-primaryColor"
+            className="w-full px-[19px] py-[11px] border bg-transparent border-primaryColor rounded focus-within:outline-primaryColor"
           />
           <Image
             src={eye}
@@ -79,7 +79,7 @@ const LoginForm = () => {
         </button>
       </form>
       <div className="w-full text-center mt-[18px]">
-        <div className=" text-sm text-[#5C6F7F] mb-[15px]">
+        <div className="text-sm text-[#5C6F7F] mb-[15px]">
           Don’t have an account?{' '}
           <Link href="/signup" className="text-primaryColor">
             Sign up
@@ -88,7 +88,7 @@ const LoginForm = () => {
         <div className="mt-[15px] text-xs text-[mb-[15px]]">
           <p>By signing in with an account, you agree to </p>
           <p>
-            Sciccor&lsquo;s &lsquo;
+            Scissor&lsquo;s &lsquo;
             <span className="text-[#5C6F7F]">
               Terms of Service, Privacy Policy
             </span>
