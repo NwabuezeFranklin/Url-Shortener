@@ -1,14 +1,14 @@
 'use client'
 
 type ConfirmationModalProps = {
-  showModal: boolean;
-  setShowModal: (prevState: boolean) => void;
+  showModal: boolean
+  setShowModal: (prevState: boolean) => void
   url: {
-    id: number;
-  };
-  deleteLink: (id: number) => void;
-  isLoading: boolean;
-};
+    id: number
+  }
+  deleteLink: (id: number) => void
+  isLoading: boolean
+}
 
 const ConfirmationModal = ({
   showModal,
@@ -17,11 +17,10 @@ const ConfirmationModal = ({
   deleteLink,
   isLoading,
 }: ConfirmationModalProps) => {
-  
   return (
     <div
-      className={`fixed inset-0 bg-[rgba(0,0,0,0.1)]  flex items-center justify-center z-[150] ${
-        showModal ? "block" : "hidden"
+      className={`fixed inset-0 bg-[rgba(0,0,0,0.1)] flex items-center justify-center z-[150] ${
+        showModal ? 'block' : 'hidden'
       }`}
     >
       <div className="bg-white shadow-md border w-full max-w-md p-6 rounded-lg">
@@ -43,20 +42,20 @@ const ConfirmationModal = ({
           Are you sure you want to delete this link? This action cannot be
           undone.
         </p>
-        <div className="flex justify-end">
+        <div className="flex flex-col space-y-2 md:flex-row md:justify-end md:space-y-0">
           <button
             className={`px-4 py-2 rounded-md text-white ${
               isLoading
-                ? "bg-gray-400 cursor-not-allowed"
-                : "bg-red-500 hover:bg-red-600"
+                ? 'bg-gray-400 cursor-not-allowed'
+                : 'bg-red-500 hover:bg-red-600'
             }`}
             onClick={() => deleteLink(url.id)}
             disabled={isLoading}
           >
-            {isLoading ? "Deleting..." : "Delete"}
+            {isLoading ? 'Deleting...' : 'Delete'}
           </button>
           <button
-            className="ml-2 px-4 py-2 rounded-md text-gray-700 bg-gray-200 hover:bg-gray-300"
+            className="mt-2 md:mt-0 px-4 py-2 rounded-md text-gray-700 bg-gray-200 hover:bg-gray-300"
             onClick={() => setShowModal(!showModal)}
             disabled={isLoading}
           >
@@ -65,7 +64,7 @@ const ConfirmationModal = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ConfirmationModal;
+export default ConfirmationModal
