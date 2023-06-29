@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import { FaEdit } from "react-icons/fa";
-import { toast } from "react-toastify";
-import useAxios from "@/utils/useAxios";
+import React, { useState } from 'react'
+import { FaEdit } from 'react-icons/fa'
+import { toast } from 'react-toastify'
+import useAxios from '@/utils/useAxios'
 
 interface EditLinkModalProp {
   url: {
-    id: number;
-    count: number;
-    original_link: string;
-    shortened_link: string;
-  };
-  showEditModal: boolean;
-  setShowEditModal: (prevState: boolean) => void;
-  isLoading: boolean;
-  setIsLoading: (prevState: boolean) => void;
+    id: number
+    count: number
+    original_link: string
+    shortened_link: string
+  }
+  showEditModal: boolean
+  setShowEditModal: (prevState: boolean) => void
+  isLoading: boolean
+  setIsLoading: (prevState: boolean) => void
 }
 
 const EditLinkModal = ({
@@ -23,37 +23,37 @@ const EditLinkModal = ({
   isLoading,
   setIsLoading,
 }: EditLinkModalProp) => {
-  const [customLink, setCustomLink] = useState<string>("");
+  const [customLink, setCustomLink] = useState<string>('')
   // Axios instance
-  const api = useAxios();
+  const api = useAxios()
 
   // Edit Link
   const editShortenedLink = async (id: number, customLink: string) => {
-    setIsLoading(true);
+    setIsLoading(true)
     try {
       const response = await api.put(`/links/${id}/`, {
         shortened_link: customLink,
-      });
-      await response.data;
-      setIsLoading(false);
-      setCustomLink("");
-      setShowEditModal(false);
-      toast.success("Link Edited successfully!", {});
+      })
+      await response.data
+      setIsLoading(false)
+      setCustomLink('')
+      setShowEditModal(false)
+      toast.success('Link Edited successfully!', {})
     } catch (error) {
-      console.error(error);
-      setIsLoading(false);
-      toast.error("An error occurred!", {});
+      console.error(error)
+      setIsLoading(false)
+      toast.error('An error occurred!', {})
     }
-  };
+  }
 
   return (
     <div
-      className={`fixed z-[200] inset-0  items-center justify-center ${
-        showEditModal ? "flex" : "hidden"
+      className={`fixed z-[200] inset-0 items-center justify-center ${
+        showEditModal ? 'flex' : 'hidden'
       }`}
     >
       <div className="fixed inset-0 bg-black opacity-75"></div>
-      <div className="relative z-10 bg-white rounded-lg shadow-lg p-6 lg:min-w-[400px]">
+      <div className="relative z-10 bg-white rounded-lg shadow-lg p-6 min-w-[300px] max-w-[90vw]">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl text-primaryColor font-semibold">Edit Link</h2>
           <button
@@ -86,23 +86,23 @@ const EditLinkModal = ({
           <input
             type="text"
             className="w-full px-3 py-2 placeholder-[#3284FF] border border-[#3284FF] rounded focus-within:outline-primaryColor"
-            placeholder="https://nwa.pythonanywhere.com/brandName"
+            placeholder="https://bit.up.railway.app/brandName"
             value={customLink}
             onChange={(e) => setCustomLink(e.target.value)}
           />
           <button
             className={`flex items-center justify-center gap-x-2 px-3 py-2 bg-blue-500 text-white rounded hover:bg-blue-600
-            ${isLoading && "cursor-not-allowed"}`}
+            ${isLoading && 'cursor-not-allowed'}`}
             disabled={isLoading}
             onClick={() => editShortenedLink(url.id, customLink)}
           >
             <FaEdit />
-            {isLoading ? "Editing..." : "Customize Link"}
+            {isLoading ? 'Editing...' : 'Customize Link'}
           </button>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default EditLinkModal;
+export default EditLinkModal
