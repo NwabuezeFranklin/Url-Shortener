@@ -1,25 +1,29 @@
 'use client'
-import React, { useContext, useRef } from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import AuthContext from '@/AuthContext/authContext'
 import { revealPassword } from '@/utils/revealPassword'
 import eye from '@/public/registration/eye.svg'
-
+import { toast } from 'react-toastify'
 const LoginForm = () => {
   const EmailRef = useRef<HTMLInputElement>(null)
   const PasswordRef = useRef<HTMLInputElement>(null)
   const { loginUser } = useContext(AuthContext)
+  const [error, setError] = useState('')
 
   const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // Check if EmailRef and PasswordRef are not null or undefined
     if (!EmailRef.current || !PasswordRef.current) return
-    loginUser(EmailRef.current?.value, PasswordRef.current?.value)
+
+    loginUser(EmailRef.current.value, PasswordRef.current.value)
+    // Handle successful login, e.g., redirect the user to a different page
+    toast.error('Failed to log in. Please check your credentials.', {})
   }
 
   return (
     <section className="flex flex-col justify-center items-center w-full h-screen px-4 sm:px-8 lg:px-[93px] lg:pt-[146px]">
+      <div>{error && <div className="text-red-500 text-sm">{error}</div>}</div>
       <p className="mb-4 text-sm text-[#5C6F7F]">Log in with:</p>
       <div className="flex gap-x-6 mb-4">
         <button className="w-[109px] h-10 flex justify-center items-center gap-x-[3px] text-sm text-white bg-primaryColor rounded">
@@ -97,6 +101,7 @@ const LoginForm = () => {
           </p>
         </div>
       </div>
+      <div></div>
     </section>
   )
 }
