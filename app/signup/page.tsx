@@ -1,7 +1,8 @@
 'use client'
-import React, { useContext, useRef } from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { toast } from 'react-toastify'
 import AuthContext from '@/AuthContext/authContext'
 import { revealPassword } from '@/utils/revealPassword'
 import eye from '@/public/registration/eye.svg'
@@ -13,28 +14,63 @@ const SignupForm = () => {
   const PasswordConfirmRef = useRef<HTMLInputElement>(null)
 
   const { registerUser } = useContext(AuthContext)
-
-  const handleSignUp = (e: React.FormEvent<HTMLFormElement>) => {
+  const [error, setError] = useState<string>('')
+  const handleSignUp = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // Check if EmailRef and PasswordRef are not null or undefined
+
+    // Check if EmailRef, PasswordRef, PasswordConfirmRef, and UserNameRef are not null or undefined
     if (
       !EmailRef.current ||
       !PasswordRef.current ||
       !PasswordConfirmRef.current ||
       !UserNameRef.current
-    )
+    ) {
+      setError('Invalid form data')
       return
+    }
+    const username = UserNameRef.current?.value
+    if (!username) {
+      setError('Please provide a username')
+      return
+    }
 
-    registerUser(
-      EmailRef.current?.value,
-      PasswordRef.current?.value,
-      PasswordConfirmRef.current?.value,
-      UserNameRef.current?.value
-    )
+    const password = PasswordRef.current?.value
+    const confirmPassword = PasswordConfirmRef.current?.value
+
+    // Check if passwords match and have at least 8 characters
+    if (password.length < 8) {
+      setError('Passwords must contain 8 characters or more')
+      return
+    }
+    if (password !== confirmPassword) {
+      setError('Passwords do not match')
+      return
+    }
+    try {
+      // Clear the error state
+      setError('')
+
+      // Send registration request to the server
+      const response = await registerUser(
+        EmailRef.current?.value ?? '',
+        PasswordRef.current?.value ?? '',
+        PasswordConfirmRef.current?.value ?? '',
+        UserNameRef.current?.value ?? ''
+      )
+
+      // Handle successful registration
+      console.log('Registration successful:', response)
+    } catch (error) {
+      // Handle registration error
+      setError('Registration failed. Please try again.')
+      console.error('Registration error:', error)
+    }
   }
 
   return (
     <section className="flex flex-col justify-center items-center w-full min-h-screen px-8 lg:px-[93px] ">
+      {/* Display error message if present */}
+      {error && <div className="text-red-500">{error}</div>}
       <p className="mb-4 text-sm text-[#5C6F7F]">Log in with:</p>
       <div className="flex gap-x-6 mb-4">
         <button className="w-[109px] h-10 flex justify-center items-center gap-x-[3px] text-sm text-white bg-primaryColor rounded">
@@ -84,7 +120,7 @@ const SignupForm = () => {
           <input
             ref={PasswordRef}
             type="password"
-            placeholder="Password"
+            placeholder="Password must contain 8 characters"
             className="w-full px-4 py-3 border bg-transparent border-primaryColor rounded outline-none focus-within:outline-primaryColor"
           />
           <Image
@@ -100,7 +136,7 @@ const SignupForm = () => {
           <input
             ref={PasswordConfirmRef}
             type="password"
-            placeholder="Retype Password"
+            placeholder="Passwords must match"
             className="w-full px-4 py-3 border bg-transparent border-primaryColor rounded outline-none focus-within:outline-primaryColor"
           />
           <Image
