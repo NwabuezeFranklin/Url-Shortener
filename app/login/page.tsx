@@ -18,7 +18,7 @@ const LoginForm = () => {
 
     loginUser(EmailRef.current.value, PasswordRef.current.value)
     // Handle successful login, e.g., redirect the user to a different page
-    toast.error('Failed to log in. Please check your credentials.', {})
+    // toast.error('Failed to log in. Please check your credentials.', {})
   }
 
   return (
