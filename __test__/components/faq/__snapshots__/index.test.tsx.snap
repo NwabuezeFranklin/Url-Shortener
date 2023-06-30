@@ -1,0 +1,285 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FAQ component matches snapshot 1`] = `
+<div>
+  <section
+    class="relative text-[#141414] flex items-center justify-center flex-col w-full px-8 pt-6 pb-16 lg:min-h-[1000px] lg:pt-11 lg:pb-[155px] lg:px-[93px]"
+    id="faq"
+  >
+    <img
+      alt=""
+      class="absolute max-w-full max-h-full bottom-0 right-0"
+      data-nimg="1"
+      decoding="async"
+      height="40"
+      loading="lazy"
+      src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+      srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+      style="color: transparent;"
+      width="40"
+    />
+    <img
+      alt=""
+      class="absolute max-w-full max-h-full top-0 left-0"
+      data-nimg="1"
+      decoding="async"
+      height="40"
+      loading="lazy"
+      src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+      srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+      style="color: transparent;"
+      width="40"
+    />
+    <div
+      class="flex items-center gap-x-4"
+    >
+      <img
+        alt=""
+        class=""
+        data-nimg="1"
+        decoding="async"
+        height="40"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+        srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+        style="color: transparent;"
+        width="40"
+      />
+      <h4
+        class="font-semibold text-2xl lg:text-[40px]"
+      >
+        FAQ
+      </h4>
+    </div>
+    <div
+      class="flex flex-col mt-8 gap-y-5 lg:gap-y-8 lg:mt-16"
+    >
+      <div
+        class="border-b border-[#D6D6D6] ease-out duration-300  lg:max-w-[795px] lg:pb-4 "
+      >
+        <div
+          class="flex justify-between items-center lg:gap-x-4"
+        >
+          <h5
+            class="  font-medium lg:font-normal lg:text-[24px] 2xl:text-[32px]"
+          >
+            How does URL shortening work?
+          </h5>
+          <img
+            alt="Expand icon"
+            class="cursor-pointer z-10"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
+        </div>
+      </div>
+      <div
+        class="border-b border-[#D6D6D6] ease-out duration-300  lg:max-w-[795px] lg:pb-4 "
+      >
+        <div
+          class="flex justify-between items-center lg:gap-x-4"
+        >
+          <h5
+            class="  font-medium lg:font-normal lg:text-[24px] 2xl:text-[32px]"
+          >
+            Is it necessary to create an account to use the URL shortening service?
+          </h5>
+          <img
+            alt="Expand icon"
+            class="cursor-pointer z-10"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
+        </div>
+      </div>
+      <div
+        class="border-b border-[#D6D6D6] ease-out duration-300  lg:max-w-[795px] lg:pb-4 "
+      >
+        <div
+          class="flex justify-between items-center lg:gap-x-4"
+        >
+          <h5
+            class="  font-medium lg:font-normal lg:text-[24px] 2xl:text-[32px]"
+          >
+            Are the shortened links permanent? Will they expire?
+          </h5>
+          <img
+            alt="Expand icon"
+            class="cursor-pointer z-10"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
+        </div>
+      </div>
+      <div
+        class="border-b border-[#D6D6D6] ease-out duration-300  lg:max-w-[795px] lg:pb-4 "
+      >
+        <div
+          class="flex justify-between items-center lg:gap-x-4"
+        >
+          <h5
+            class="  font-medium lg:font-normal lg:text-[24px] 2xl:text-[32px]"
+          >
+            Are there any limitations on the number of URLs I can shorten?
+          </h5>
+          <img
+            alt="Expand icon"
+            class="cursor-pointer z-10"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
+        </div>
+      </div>
+      <div
+        class="border-b border-[#D6D6D6] ease-out duration-300  lg:max-w-[795px] lg:pb-4 "
+      >
+        <div
+          class="flex justify-between items-center lg:gap-x-4"
+        >
+          <h5
+            class="  font-medium lg:font-normal lg:text-[24px] 2xl:text-[32px]"
+          >
+            Can I customize the shortened URLs to reflect my brand or content?
+          </h5>
+          <img
+            alt="Expand icon"
+            class="cursor-pointer z-10"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
+        </div>
+      </div>
+      <div
+        class="border-b border-[#D6D6D6] ease-out duration-300  lg:max-w-[795px] lg:pb-4 "
+      >
+        <div
+          class="flex justify-between items-center lg:gap-x-4"
+        >
+          <h5
+            class="  font-medium lg:font-normal lg:text-[24px] 2xl:text-[32px]"
+          >
+            Can I track the performance of my shortened links?
+          </h5>
+          <img
+            alt="Expand icon"
+            class="cursor-pointer z-10"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
+        </div>
+      </div>
+      <div
+        class="border-b border-[#D6D6D6] ease-out duration-300  lg:max-w-[795px] lg:pb-4 "
+      >
+        <div
+          class="flex justify-between items-center lg:gap-x-4"
+        >
+          <h5
+            class="  font-medium lg:font-normal lg:text-[24px] 2xl:text-[32px]"
+          >
+            How secure is the URL shortening service? Are the shortened links protected against spam or malicious activity?
+          </h5>
+          <img
+            alt="Expand icon"
+            class="cursor-pointer z-10"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
+        </div>
+      </div>
+      <div
+        class="border-b border-[#D6D6D6] ease-out duration-300  lg:max-w-[795px] lg:pb-4 "
+      >
+        <div
+          class="flex justify-between items-center lg:gap-x-4"
+        >
+          <h5
+            class="  font-medium lg:font-normal lg:text-[24px] 2xl:text-[32px]"
+          >
+            What is a QR code and what can it do?
+          </h5>
+          <img
+            alt="Expand icon"
+            class="cursor-pointer z-10"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
+        </div>
+      </div>
+      <div
+        class="border-b border-[#D6D6D6] ease-out duration-300  lg:max-w-[795px] lg:pb-4 "
+      >
+        <div
+          class="flex justify-between items-center lg:gap-x-4"
+        >
+          <h5
+            class="  font-medium lg:font-normal lg:text-[24px] 2xl:text-[32px]"
+          >
+            Is there an API available for integrating the URL shortening service into my own applications or websites?
+          </h5>
+          <img
+            alt="Expand icon"
+            class="cursor-pointer z-10"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
